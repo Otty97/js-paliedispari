@@ -1,17 +1,21 @@
+//Raccolta degli input
 var userWord = prompt("Inserisci parola");
 
-function stringaInversa (userWord) {
-  var wordString = userWord.length;
-  var start = userWord.substring(0, Math.floor(wordString/2)).toLowerCase();
-  var end = userWord.substring(wordString - Math.floor(wordString/2)).toLowerCase();
-  var flip = end.split("").reverse().join("");
-  var message = "Non è una PALIDROMA";
+//Definizione della Funzione
+function palindroma(parola) {
+  var parolaString = parola.length ;
+  var flip = parolaString.split('').reverse().join('');
 
-  if (start === flip) {
-    message = "La parola è una PALIDROMA"
-  } else {
-    message
+  if (parolaString === flip) {
+    return true;
   }
+  return false;
 }
 
-document.getElementById('result').innerHTML = "ciao" + message;
+//Utilizzo della funzione --> Stampa Risultato
+var isPalindroma = palindroma(userWord);
+if (isPalindroma == false){
+  document.getElementById('result').innerHTML = "La parola è una PALIDROMA" ;
+} else {
+  document.getElementById('result').innerHTML = "La parola NON è una PALIDROMA" ;
+}

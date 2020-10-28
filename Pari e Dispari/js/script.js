@@ -21,9 +21,3 @@ if (sommaNumeri % 2 == 0) {
 }
 
 document.getElementById('result').innerHTML = message
-
-if (parioDispari === message){
-  document.getElementById('finalResult').innerHTML = "YOU WIN!"
-} else {
-  document.getElementById('finalResult').innerHTML = "YOU LOSE!"
-}
